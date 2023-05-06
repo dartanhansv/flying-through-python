@@ -1,6 +1,6 @@
 def write_sales_log(order):
     # open the file
-    file = open('sales.txt', 'w')
+    file = open('sales.txt', 'a')
 
     # write each item to the file
     # write the total to the file
