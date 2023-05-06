@@ -17,7 +17,7 @@ def read_dollar_menu():
         print(line)
 
     dollar_spam.close()    
-'''
+
 
 # 3rd, adding line items from the file to a list 
 def read_dollar_menu():
@@ -26,6 +26,21 @@ def read_dollar_menu():
     dollar_menu = []
     
     for line in dollar_spam:
+        dollar_menu.append(line)
+    
+    print(dollar_menu)
+    dollar_spam.close()  
+
+'''
+
+# 4th, removing (stripping) the newline caracter (\n)
+def read_dollar_menu():
+    dollar_spam = open('dollar_menu.txt', 'r')
+    # create an empty list
+    dollar_menu = []
+    
+    for line in dollar_spam:
+        line = line.strip()
         dollar_menu.append(line)
     
     print(dollar_menu)
