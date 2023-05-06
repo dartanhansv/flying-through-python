@@ -9,7 +9,7 @@ def write_sales_log(order):
         file.write(item + ' ' + format(price, '.2f') + '\n')
         total += price
 
-    file.write('total = ' + format(total, '.2f') + '\n')
+    file.write('total = ' + format(total, '.2f') + '\n\n')
 
 
     # close the file
