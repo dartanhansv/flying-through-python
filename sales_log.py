@@ -19,5 +19,7 @@ def write_sales_log(order):
 def main():
     order = {'Cheeky Spam': 1.0, 'Yonks Spam': 4.0}
     write_sales_log(order)
-
+    # secong order
+    order = {'Cheerio Spam': 1.0, 'Smashing Spam': 3.0}
+    write_sales_log(order)
 main()
