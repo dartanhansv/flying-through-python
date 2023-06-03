@@ -4,39 +4,54 @@
 3. Calculate the total bill
 """
 
+
 def print_menu(menu):
     for name, price in menu.items():
-        print(name, ': $', format(price, '.2f'), sep="")
+        print(name, ": $", format(price, ".2f"), sep="")
+
 
 def get_order(menu):
     orders = []
     order = input("What would you like to order? (Q to Quit)")
 
-    while (order.upper() != 'Q'):
+    while order.upper() != "Q":
         # find the order
         found = menu.get(order)
         if found:
             orders.append(order)
         else:
             print("Menu item doesn't exist")
-        
-        order = input('Anything else? (Q to Quit)')
+
+        order = input("Anything else? (Q to Quit)")
     return orders
 
 
-def bill_total(orders, menu):           # Parameters: we need the list of orders and the menu to look up the price
+def bill_total(
+    orders, menu
+):  # Parameters: we need the list of orders and the menu to look up the price
     total = 0
 
-    for order in orders:                # Program Logic: For each order in our orders list, we want to add the price to our total
+    for order in orders:
+        # Program Logic: For each order in our orders list,
+        # we want to add the price to our total
         total += menu[order]
 
-    return total                        # Return the total
+    return total  # Return the total
 
 
 def main():
-    menu = {'Knackered Spam': 0.50, 'Pip pip Spam': 1.50, 'Squidgy Spam': 2.50, 'Smashing Spam':3.50}
+    menu = {
+        "Knackered Spam": 0.50,
+        "Pip pip Spam": 1.50,
+        "Squidgy Spam": 2.50,
+        "Smashing Spam": 3.50,
+    }
     print_menu(menu)
     order = get_order(menu)
     total = bill_total(order, menu)
-    print("You ordered: ", order, "\n", "Your total is: $", format(total, '.2f'), sep='')
+    print(
+        "You ordered: ", order, "\n", "Your total is: $", format(total, ".2f"), sep=""
+    )
+
+
 main()
