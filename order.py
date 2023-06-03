@@ -12,7 +12,7 @@ def print_menu(menu):
 
 def get_order(menu):
     orders = []
-    order = input("What would you like to order? (Q to Quit)")
+    order = input("What would you like to order? (Q to Quit)\n")
 
     while order.upper() != "Q":
         # find the order
@@ -22,7 +22,7 @@ def get_order(menu):
         else:
             print("Menu item doesn't exist")
 
-        order = input("Anything else? (Q to Quit)")
+        order = input("Anything else? (Q to Quit) \n")
     return orders
 
 
@@ -49,9 +49,8 @@ def main():
     print_menu(menu)
     order = get_order(menu)
     total = bill_total(order, menu)
-    print(
-        "You ordered: ", order, "\n", "Your total is: $", format(total, ".2f"), sep=""
-    )
+    print("You ordered: ", order)
+    print("Your total is: $", format(total, ".2f"), sep="")
 
 
 main()
