@@ -39,6 +39,7 @@ def bill_total(
     return total  # Return the total
 
 
+<<<<<<< HEAD:order.py
 def main():
     menu = {
         "Knackered Spam": 0.50,
@@ -54,3 +55,5 @@ def main():
 
 
 main()
+=======
+>>>>>>> 9e1ed1aabab3b0f7541af240181a0f27be910643:orders.py
